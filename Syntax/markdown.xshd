@@ -9,8 +9,8 @@
   <Color name="Quote"   foreground="#6A9955" />
 
   <RuleSet>
-    <Rule color="Heading">^#{1,6}.*$</Rule>
-    <Rule color="Quote">^&gt;.*$</Rule>
+    <Rule color="Heading">^\#{1,6}.*</Rule>
+    <Rule color="Quote">^&gt;.*</Rule>
     <Rule color="List">^[\t ]*[-*+][ \t]</Rule>
     <Rule color="Code">`[^`]+`</Rule>
     <Rule color="Link">\[[^\]]+\]\([^\)]+\)</Rule>
