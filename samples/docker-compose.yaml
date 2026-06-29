@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      DEBUG: "true"
+      MAX_CONN: 100
+
+  cache:
+    image: redis:7
+    # comment: persistent cache volume

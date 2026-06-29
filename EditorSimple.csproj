@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>EditorSimple</RootNamespace>
+    <AssemblyName>EditorSimple</AssemblyName>
+    <Version>1.0.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationDefaultFont>Segoe UI</ApplicationDefaultFont>
+    <!-- DPI awareness is declared in app.manifest (classic WPF approach); the SDK
+         suggestion to use the API instead is benign and suppressed here. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.2.0.78" />
+  </ItemGroup>
+
+  <!-- Embed dark-themed syntax definitions; loaded as manifest resources -->
+  <ItemGroup>
+    <EmbeddedResource Include="Syntax\json.xshd" />
+    <EmbeddedResource Include="Syntax\yaml.xshd" />
+    <EmbeddedResource Include="Syntax\toml.xshd" />
+    <EmbeddedResource Include="Syntax\markdown.xshd" />
+  </ItemGroup>
+
+</Project>

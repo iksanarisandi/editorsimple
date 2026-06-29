@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyntaxDefinition name="YAML" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="DocSep"  foreground="#569CD6" />
+  <Color name="Comment" foreground="#6A9955" />
+  <Color name="Key"     foreground="#9CDCFE" />
+  <Color name="Keyword" foreground="#569CD6" />
+  <Color name="Number"  foreground="#B5CEA8" />
+  <Color name="String"  foreground="#CE9178" />
+  <Color name="Punct"   foreground="#808080" />
+
+  <RuleSet>
+    <Rule color="DocSep">^\-{3}.*$</Rule>
+    <Rule color="Comment">\#.*$</Rule>
+
+    <!-- key at line start followed by ": " or trailing ":" -->
+    <Rule color="Key">^[\t ]*[\w\.\-]+(?=:[ \t]|:$)</Rule>
+
+    <!-- list marker -->
+    <Rule color="Punct">^[\t ]*-(?=[ \t])</Rule>
+
+    <Keywords color="Keyword">
+      <Word>true</Word>
+      <Word>false</Word>
+      <Word>null</Word>
+      <Word>yes</Word>
+      <Word>no</Word>
+      <Word>on</Word>
+      <Word>off</Word>
+    </Keywords>
+
+    <Rule color="Number">\b\d+(\.\d+)?\b</Rule>
+
+    <!-- quoted strings -->
+    <Rule color="String">"(?:[^"\\]|\\.)*"|'(?:[^'])*'</Rule>
+  </RuleSet>
+</SyntaxDefinition>

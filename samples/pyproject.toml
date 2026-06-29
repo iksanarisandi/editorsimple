@@ -1,0 +1,13 @@
+[project]
+name = "demo"
+version = "1.0.0"
+description = "Sample config for EditorSimple"
+
+[tool.editor]
+theme = "dark"
+font_size = 14
+auto_save = false
+
+[tool.editor.shortcuts]
+save = "Ctrl+S"
+open = "Ctrl+O"

@@ -1,0 +1,56 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+## Compiled output & symbols
+*.dll
+*.exe
+*.pdb
+*.cache
+
+## Publish
+publish/
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+PublishProfiles/
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## Logs
+*.log
+*.tlog
+
+## OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
